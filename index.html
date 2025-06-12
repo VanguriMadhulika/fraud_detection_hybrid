@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fraud Detection</title>
+    <style>
+        body { font-family: Arial; margin: 40px; }
+        .input-group { margin-bottom: 10px; }
+        label { display: inline-block; width: 50px; }
+        .result { margin-top: 20px; font-weight: bold; font-size: 18px; }
+        .fraud { color: red; }
+        .safe { color: green; }
+    </style>
+</head>
+<body>
+    <h2>Enter Transaction Details</h2>
+    <form method="POST" action="/predict">
+        {% for feature in features %}
+            <div class="input-group">
+                <label for="{{ feature }}">{{ feature }}:</label>
+                <input type="text" name="{{ feature }}" required>
+            </div>
+        {% endfor %}
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction is defined %}
+        <div class="result {{ 'fraud' if prediction == 1 else 'safe' }}">
+            Prediction Result: {{ 'Fraud' if prediction == 1 else 'Not Fraud' }}
+        </div>
+    {% endif %}
+</body>
+</html>
