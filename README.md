@@ -54,21 +54,6 @@ Go to: http://127.0.0.1:5000
 
 ✅ Lightweight and easy to deploy.
 
-📁 File Structure
-csharp
-Copy
-Edit
-fraud-detection-hybrid/
-│
-├── app.py                # Flask web app
-├── model_xgboost.pkl     # Saved XGBoost model
-├── autoencoder_model.h5  # Trained Autoencoder model
-├── templates/
-│   └── index.html        # Frontend HTML
-├── static/
-│   ├── style.css         # CSS file
-├── requirements.txt      # Required packages
-└── README.md             # Project overview
 ⚠️ Note
 The original dataset creditcard.csv exceeds GitHub's upload limit and is not included here. You can download it from:
 
@@ -83,7 +68,5 @@ Build a dashboard for model analytics.
 
 Deploy on cloud (e.g., AWS, Heroku).
 
-🙋‍♀️ Author
-Madhulika Vanguri
-GitHub: VanguriMadhulika
+
 
